@@ -8,11 +8,13 @@
 #include <iomanip>
 #include <fstream>
 #include <math.h>
-#include <string.h>
+#include <string>
+
 #include "Wektor.hh"
 #include "Macierz.hh"
 #include "Prostokat.hh"
 #include "lacze_do_gnuplota.hh"
+
 
 
 
