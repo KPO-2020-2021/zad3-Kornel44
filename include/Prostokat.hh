@@ -18,6 +18,8 @@ class Prostokat {
   void przesuniecie(Wektor Kier);
   void obrot(Macierz Kont,  int ilosc);
   double dlugoscboku (unsigned int wierzcholekA, unsigned int wierzcholekB) const;
+  void wypiszdlugosc();
+  void wyswietl();
 };
 
 

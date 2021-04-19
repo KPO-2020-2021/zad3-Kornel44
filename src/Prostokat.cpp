@@ -68,3 +68,55 @@ double Prostokat::dlugoscboku (unsigned int wierzcholekA, unsigned int wierzchol
     wynik=sqrt(pow(this->Figura[wierzcholekB][0]-this->Figura[wierzcholekA][0], 2)+pow(this->Figura[wierzcholekB][1]-this->Figura[wierzcholekA][1], 2));
     return wynik;
 }
+
+void Prostokat::wypiszdlugosc(){
+    double ab, cd, ac, bd;
+    ab=dlugoscboku(0,1);
+    cd=dlugoscboku(2,3);
+    ac=dlugoscboku(1,2);
+    bd=dlugoscboku(3,0);
+    if(ab>ac){
+         if(ab==cd){
+            std::cout<<"Dłuższe przeciwległe boki są równe"<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ab<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<cd<<std::endl;
+        }else{
+            std::cout<<"Dłuższe przeciwległe boki nie są równe!!!"<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ab<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<cd<<std::endl;
+        }
+        if(ac==bd){
+            std::cout<<"Krótsze przeciwległe boki są równe"<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ac<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<bd<<std::endl;
+        }else{
+            std::cout<<"Krótsze przeciwległe boki nie są równe!!!"<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ac<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<bd<<std::endl;
+        }
+    }else{
+        if(ac==bd){
+            std::cout<<"Dłuższe  przeciwległe boki są równe: "<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ac<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<bd<<std::endl;
+        }else{
+            std::cout<<"Dłuższe przeciwległe boki nie są równe!!!"<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ac<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<bd<<std::endl;
+        }
+        if(ab==cd){
+            std::cout<<"Krótsze przeciwległe boki są równe: "<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ab<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<cd<<std::endl;
+        }else{
+            std::cout<<"Krótsze przeciwległe boki nie są równe!!!"<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<ab<<std::endl;
+            std::cout<<"Długość pierwszego boku: "<<std::fixed<<std::setprecision(10)<<cd<<std::endl;
+        }
+    }
+}
+void Prostokat::wyswietl(){
+    for(int i=0;i<ILOSCBOKOW;++i){
+        std::cout<<std::setw(16)<<this->Figura[i]<<std::endl;}
+    
+}
