@@ -1,4 +1,21 @@
 #include "Macierz.hh"
+#include "math.h"
+
+Macierz::Macierz(){
+    for (int i = 0; i < ROZMIARMACIERZY; ++i)
+    {for(int j =0; i < ROZMIARWEKTORA; ++i){
+        macierz[i][j]=0;}
+    }
+    
+}
+
+Macierz::Macierz(Wektor tmp[ROZMIARMACIERZY]){
+    for (int i = 0; i < ROZMIARMACIERZY; ++i)
+    {
+        macierz[i]=tmp[i];
+    }
+    
+}
 
  Wektor Macierz::operator [](int ind)const{
      if (ind <ROZMIARMACIERZY) return macierz[ind];
@@ -30,4 +47,13 @@ Wektor Macierz::operator *(const Wektor& Arg2) const{
     }
     return wynik;
     
+}
+
+void Macierz::Mobrotu (double Kont){
+double KontRad;
+KontRad=Kont*M_PI/180;
+this->macierz[0][0]=cos(KontRad);
+this->macierz[0][1]=-sin(KontRad);
+this->macierz[1][0]=sin(KontRad);
+this->macierz[1][1]=cos(KontRad);
 }

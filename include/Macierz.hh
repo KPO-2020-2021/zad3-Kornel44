@@ -15,9 +15,12 @@ class Macierz{
   Wektor macierz[ROZMIARMACIERZY];
 
   public:
+  Macierz();
+  Macierz(Wektor tmp[ROZMIARMACIERZY]);
   Wektor operator [](int ind)const;
   Wektor& operator [](int ind );
   Wektor operator *(const Wektor& Arg2) const;
+  void Mobrotu (double Kont);
 };
 
 

@@ -2,7 +2,7 @@
 #include<iomanip>
 #include<math.h>
 
-#define MINDIV 0.01
+
 
  Wektor::Wektor(double tmp[ROZMIARWEKTORA]){
      for (int i = 0; i < ROZMIARWEKTORA; ++i)

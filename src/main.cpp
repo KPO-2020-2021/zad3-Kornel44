@@ -36,7 +36,7 @@ int main()
   ofstream StrmWyj;
   Wektor test;
   Macierz obrot;
-  double kat=M_PI/2;
+  double kont=90;
                                 // rysunku prostokata
 
    //-------------------------------------------------------
@@ -68,10 +68,7 @@ int main()
   Pr[3][1]=100;
   test[0]=10;
   test[1]=50;
-  obrot[0][0]=cos(kat);
-  obrot[0][1]=-sin(kat);
-  obrot[1][0]=sin(kat);
-  obrot[1][1]=cos(kat);
+  obrot.Mobrotu(kont);
 
   cout<<Pr;
   cout<<Pr.dlugoscboku(0,1)<<endl;
