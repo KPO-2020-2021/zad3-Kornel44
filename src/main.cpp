@@ -58,14 +58,14 @@ int main()
    //
   Lacze.ZmienTrybRys(PzG::TR_2D); 
 
-  Pr('a')[0]=100;
-  Pr('a')[1]=100;
-  Pr('b')[0]=100;
-  Pr('b')[1]=200;
-  Pr('c')[0]=200;
-  Pr('c')[1]=200;
-  Pr('d')[0]=200;
-  Pr('d')[1]=100;
+  Pr[0][0]=100;
+  Pr[0][1]=100;
+  Pr[1][0]=100;
+  Pr[1][1]=200;
+  Pr[2][0]=200;
+  Pr[2][1]=200;
+  Pr[3][0]=200;
+  Pr[3][1]=100;
   test[0]=10;
   test[1]=50;
   obrot[0][0]=cos(kat);
@@ -74,10 +74,10 @@ int main()
   obrot[1][1]=cos(kat);
 
   cout<<Pr;
+  cout<<Pr.dlugoscboku(0,1)<<endl;
   StrmWyj.open("prostokat.dat");
   if(StrmWyj.is_open()){
          StrmWyj<<Pr;
-         StrmWyj<<setw(16)<<Pr('a')<<endl;
          StrmWyj.close();
          }else{
                 throw runtime_error ("operacja otwarcia pliku nie powiodla sie");
@@ -90,10 +90,10 @@ int main()
 
   Pr.przesuniecie(test);
   cout<<Pr;
+  cout<<Pr.dlugoscboku(0,1)<<endl;
   StrmWyj.open("prostokat.dat");
   if(StrmWyj.is_open()){
          StrmWyj<<Pr;
-         StrmWyj<<setw(16)<<Pr('a')<<endl;
          StrmWyj.close();}else{
                 throw runtime_error ("operacja otwarcia pliku nie powiodla sie");
          }
@@ -103,12 +103,12 @@ int main()
   cin.ignore(100000,'\n');}
 
 
-   Pr.obrot(obrot);
+   Pr.obrot(obrot, 1);
   cout<<Pr;
+  cout<<Pr.dlugoscboku(0,1)<<endl;
   StrmWyj.open("prostokat.dat");
   if(StrmWyj.is_open()){
          StrmWyj<<Pr;
-         StrmWyj<<setw(16)<<Pr('a')<<endl;
          StrmWyj.close();}else{
                 throw runtime_error ("operacja otwarcia pliku nie powiodla sie");
          }

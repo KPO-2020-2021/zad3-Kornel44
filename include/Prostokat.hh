@@ -9,12 +9,15 @@
  *  Opisuje prostokąt jako cztery punkty na płaszczyźnie wyrażone jako wektory o pączątkach w punkcie 00.
  */
 class Prostokat {
-  Wektor a,b,c,d;
+  Wektor Figura[ILOSCBOKOW];
   public:
-  Wektor operator ()(const char abcd)const;
-  Wektor& operator ()(const char abcd);
+  Prostokat();
+  Prostokat(Wektor tmp[ILOSCBOKOW] );
+  Wektor operator [](unsigned int wierzcholek)const;
+  Wektor& operator [](unsigned int wierzcholek);
   void przesuniecie(Wektor Kier);
-  void obrot(Macierz Kont);
+  void obrot(Macierz Kont,  int ilosc);
+  double dlugoscboku (unsigned int wierzcholekA, unsigned int wierzcholekB) const;
 };
 
 

@@ -2,4 +2,5 @@
 
 constexpr int ROZMIARMACIERZY = 2;
 constexpr int ROZMIARWEKTORA = 2;
+constexpr int ILOSCBOKOW = 4;
 

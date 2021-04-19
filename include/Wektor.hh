@@ -14,11 +14,15 @@ class Wektor {
   double wektor[ROZMIARWEKTORA];
 
   public:
-  double operator []( int ind) const {return wektor[ind];}
-  double & operator [](int ind){return wektor[ind];}
+  Wektor(){for (int i = 0; i < ROZMIARWEKTORA; ++i){this->wektor[i]=0;}}
+  Wektor(double tmp[ROZMIARWEKTORA]);
+  double operator []( int ind) const;
+  double & operator [](int ind);
   Wektor operator + (Wektor Arg2)const;
   Wektor operator - (Wektor Arg2)const;
   double operator * (Wektor Arg2) const;
+  bool operator == (Wektor Arg2)const;
+  
 
 
 };

@@ -15,8 +15,8 @@ class Macierz{
   Wektor macierz[ROZMIARMACIERZY];
 
   public:
-  Wektor operator [](int ind)const{return macierz[ind];}
-  Wektor& operator [](int ind ) {return macierz[ind];}
+  Wektor operator [](int ind)const;
+  Wektor& operator [](int ind );
   Wektor operator *(const Wektor& Arg2) const;
 };
 
